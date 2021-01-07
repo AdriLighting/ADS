@@ -40,10 +40,10 @@
 * by Arduinojson
   * ![arduinojson](https://github.com/bblanchon/ArduinoJson)
 * by Adafruit 
-  * ![ST7735](https://github.com/adafruit/Adafruit-ST7735-Library)
-  * ![Adafruit_Sensor](https://github.com/adafruit/Adafruit_Sensor)  
-  * ![DHT](https://github.com/adafruit/DHT-sensor-library)  
- * by squix78    
-  * ![json-streaming-parser](https://github.com/squix78/json-streaming-parser)
- * by PaulStoffregen
-  * ![TimeLib](https://github.com/PaulStoffregen/Time) 
+ * ![ST7735](https://github.com/adafruit/Adafruit-ST7735-Library)
+ * ![Adafruit_Sensor](https://github.com/adafruit/Adafruit_Sensor)  
+ * ![DHT](https://github.com/adafruit/DHT-sensor-library)  
+* by squix78    
+ * ![json-streaming-parser](https://github.com/squix78/json-streaming-parser)
+* by PaulStoffregen
+ * ![TimeLib](https://github.com/PaulStoffregen/Time) 
