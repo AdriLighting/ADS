@@ -14,7 +14,7 @@
 > udp server piloted via android application
 ### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
-#### Librairies ADS
+#### Librairies ADS by AdriLighting
 * ![DA_COMMON](https://github.com/AdriLighting/DA_COMMON)
 #### Librairies additionnelles by AdriLighting
 * ![adri_espwebserver](https://github.com/AdriLighting/adri_espwebserver)
@@ -33,7 +33,7 @@
 > udp server piloted via push-button and oled-display(128x64)
 ### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
-#### Librairies ADS
+#### Librairies ADS by AdriLighting
 * ![DA_COMMON](https://github.com/AdriLighting/DA_COMMON)
 #### Librairies additionnelles by AdriLighting
 * ![adri_oled_menu_128x64](https://github.com/AdriLighting/adri_oled_menu_128x64)
