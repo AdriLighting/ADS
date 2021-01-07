@@ -1,0 +1,920 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inc",
+				"inc\t#include \"…\""
+			],
+			[
+				"fspri",
+				"fsprintf"
+			],
+			[
+				"ti",
+				"timer_eventLoop"
+			],
+			[
+				"DS",
+				"DS3132_ip"
+			],
+			[
+				"timer",
+				"timer_syncNtp"
+			],
+			[
+				"s_",
+				"s_1"
+			],
+			[
+				"pr",
+				"printf\tprintf …"
+			],
+			[
+				"events",
+				"events_sav_toSpiff"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"ch",
+				"ch_toString"
+			],
+			[
+				"pri",
+				"printf\tprintf …"
+			],
+			[
+				"scr",
+				"screenPos"
+			],
+			[
+				"fill",
+				"fillRect"
+			],
+			[
+				"for",
+				"for\tFor Loop"
+			],
+			[
+				"start",
+				"starty"
+			],
+			[
+				"oj",
+				"obj"
+			],
+			[
+				"sc",
+				"screen_buzzer_loop"
+			],
+			[
+				"screen",
+				"screen_main"
+			],
+			[
+				"sans",
+				"SansSerif_plain_10"
+			],
+			[
+				"ADRI",
+				"adriTFTUI_button"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"wb",
+				"wbt"
+			],
+			[
+				"C_",
+				"C_YELLOW"
+			],
+			[
+				"BTM",
+				"BTM_TEXT"
+			],
+			[
+				"print",
+				"printf\tprintf …"
+			],
+			[
+				"get",
+				"getMod"
+			],
+			[
+				"is",
+				"isSelected"
+			],
+			[
+				"scree",
+				"screen_alarmClock_infos"
+			],
+			[
+				"wB",
+				"wBt"
+			],
+			[
+				"wT",
+				"wTxt"
+			],
+			[
+				"star",
+				"startX"
+			],
+			[
+				"int",
+				"int16_t"
+			],
+			[
+				"xe",
+				"xSep_2"
+			],
+			[
+				"y",
+				"yT_1"
+			],
+			[
+				"s",
+				"sBt_1"
+			],
+			[
+				"u",
+				"u8g2"
+			],
+			[
+				"temp",
+				"temp_w"
+			],
+			[
+				"ope",
+				"openWeatherMapList_data"
+			],
+			[
+				"json_current",
+				"json_currentTime"
+			],
+			[
+				"dra",
+				"draw"
+			],
+			[
+				"ui",
+				"uint16_t"
+			],
+			[
+				"sa",
+				"SansSerif_plain_10"
+			],
+			[
+				"txt",
+				"txtArray_pos"
+			],
+			[
+				"screen_mp3_pr",
+				"_screen_mp3_progressBar"
+			],
+			[
+				"screen_mp3_timer",
+				"_screen_mp3_timer_btUp"
+			],
+			[
+				"_scree",
+				"_screen_mp3_progressBar"
+			],
+			[
+				"sw",
+				"switch\tArduino switch"
+			],
+			[
+				"scon",
+				"secondsOld"
+			],
+			[
+				"se",
+				"secondsOld"
+			],
+			[
+				"in",
+				"inc\t#include \"…\""
+			],
+			[
+				"Ser",
+				"Serial1"
+			],
+			[
+				"strat",
+				"starty"
+			],
+			[
+				"_colo",
+				"_color_ico_1"
+			],
+			[
+				"event",
+				"envent_setup"
+			],
+			[
+				"atta",
+				"attachFunc"
+			],
+			[
+				"boo",
+				"boolean"
+			],
+			[
+				"ntp_",
+				"ntp_prevDisplay"
+			],
+			[
+				"screen_ma",
+				"screen_main_init"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"_text",
+				"_text_y"
+			],
+			[
+				"u8g",
+				"u8g2"
+			],
+			[
+				"_line",
+				"_lines_cnt"
+			],
+			[
+				"ad",
+				"adriTFTUI_lblValue"
+			],
+			[
+				"test",
+				"test_lblVale"
+			],
+			[
+				"btn_",
+				"btn_up"
+			],
+			[
+				"y_re",
+				"y_rect3"
+			],
+			[
+				"st",
+				"start_x"
+			],
+			[
+				"mp",
+				"_mp3Player_timer"
+			],
+			[
+				"max",
+				"max_w"
+			],
+			[
+				"v",
+				"value_1"
+			],
+			[
+				"_mp3Player_",
+				"_mp3Player_timer"
+			],
+			[
+				"adr",
+				"adriTFTscreen_count"
+			],
+			[
+				"screen_f",
+				"screen_footer_display"
+			],
+			[
+				"scre",
+				"screen_txt_counter"
+			],
+			[
+				"_te",
+				"_text_x"
+			],
+			[
+				"spr",
+				"sprintf"
+			],
+			[
+				"lo",
+				"loop\tArduino loop"
+			],
+			[
+				"bar",
+				"barColor"
+			],
+			[
+				"per",
+				"percentage"
+			],
+			[
+				"ba",
+				"barWidth"
+			],
+			[
+				"uin",
+				"uint8_t"
+			],
+			[
+				"C_B",
+				"C_BLACK"
+			],
+			[
+				"touc",
+				"touch_btn_resetBorder"
+			],
+			[
+				"tou",
+				"touch_btn"
+			],
+			[
+				"c",
+				"cPos"
+			],
+			[
+				"draw",
+				"drawString"
+			],
+			[
+				"bt_",
+				"bt_2"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"begi",
+				"begin"
+			],
+			[
+				"TOU",
+				"TOUCH_2"
+			],
+			[
+				"_y",
+				"_yt"
+			],
+			[
+				"_t",
+				"_text"
+			],
+			[
+				"line",
+				"lineHeight"
+			],
+			[
+				"webso",
+				"webSocketClient"
+			],
+			[
+				"old",
+				"oldValue"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"upda",
+				"update_gui"
+			],
+			[
+				"ali",
+				"text-align\tproperty"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"f",
+				"for\tfor (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"my",
+				"myServo_2"
+			],
+			[
+				"de",
+				"delay\tArduino delay()"
+			],
+			[
+				"radi",
+				"radio_receivedData"
+			],
+			[
+				"mi",
+				"millis\tArduino millis()"
+			],
+			[
+				"marg",
+				"margin-top\tproperty"
+			],
+			[
+				"nu",
+				"num"
+			],
+			[
+				"_paus",
+				"_pause_timer"
+			],
+			[
+				"MSGEQ7_",
+				"MSGEQ7_AUDIO_PIN"
+			],
+			[
+				"adri",
+				"adri_socket"
+			],
+			[
+				"ht",
+				"html"
+			],
+			[
+				"handle",
+				"handleStatus"
+			],
+			[
+				"request",
+				"request_1"
+			],
+			[
+				"requesr",
+				"requestReponse"
+			],
+			[
+				"reque",
+				"requestReponse"
+			],
+			[
+				"reques",
+				"request_http_parse_command"
+			],
+			[
+				"adri_",
+				"adri_udpMulti"
+			],
+			[
+				"ic",
+				"inc\t#include \"…\""
+			],
+			[
+				"ds",
+				"ds18b20_build_udpMsg"
+			],
+			[
+				"mp3",
+				"mp3loop"
+			],
+			[
+				"che",
+				"check"
+			],
+			[
+				"cF",
+				"cFolder"
+			],
+			[
+				"me",
+				"meteo_update_timer"
+			],
+			[
+				"m",
+				"m_pump"
+			],
+			[
+				"s_f",
+				"s_file"
+			],
+			[
+				"buzzer_play",
+				"buzzer_play_pirate"
+			],
+			[
+				"udp",
+				"udpSendRequest_buildTimeUrl"
+			],
+			[
+				"pi",
+				"pir_object"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"tog",
+				"Toggle Block Comment"
+			],
+			[
+				"too",
+				"Toggle Block Comment"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"togg",
+				"Toggle Block Comment"
+			],
+			[
+				"to",
+				"Toggle Block Comment"
+			],
+			[
+				"up",
+				"Convert Case: Upper Case"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"lo",
+				"Convert Case: Lower Case"
+			],
+			[
+				"ins",
+				"InsertDate: Default"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"inser",
+				"InsertDate: Default"
+			],
+			[
+				"in",
+				"InsertDate: Default"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"Text Marker: Highlight Selection Custom Color"
+			],
+			[
+				"color",
+				"Text Marker: Highlight Selection Color (orangered)"
+			],
+			[
+				"",
+				"Bookmarks: Select All"
+			],
+			[
+				"t",
+				"Toggle Block Comment"
+			],
+			[
+				"u",
+				"Convert Case: Upper Case"
+			],
+			[
+				"comm",
+				"Toggle Block Comment"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"sub",
+				"Sublime Merge: Open Repository"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 143.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/Arduino/Arduino_Projet/Projet/reveilMultiFonctions/alarmclock_event.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveilMultiFonctions/reveilMultiFonctions.ino",
+		"/E/Arduino/Arduino_Projet/Projet/reveilMultiFonctions/data/css/style.css",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_calendar_event/src/calendar.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/reveilMultiFonctions/data/mp3_player.htm",
+		"/C/Users/adri/Desktop/foldertemp/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_home.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_udp/src/adri_udp.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_leds_color/src/adri_leds_colors.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/ESPAsyncTCP-master/src/ESPAsyncTCP.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_calendar_event/calendar.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_calendar_event/calendar.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_calendar_event/calendar_add.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_calendar_event/calendar_add.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/src/adri_webserver_reponse.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/src/adri_webserver_reponse.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/src/adri_webserver_reponselist.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/src/adri_webserver_parsecommand.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_calendar_event/calendar_date.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_calendar_event/calendar_date.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/src/adri_webserver_reponselist.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/src/adri_webserver_parsecommand.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/reveilMultiFonctions.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/ESPUI-master/src/ESPUI.h",
+		"/C/Users/adri/Documents/Arduino/libraries/ESPUI-master/examples/gui/gui.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/ESPUI-master/src/ESPUI.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/udp.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_udp/adri_udp.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_udp/adri_udp.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/request_appi.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/alarmclock.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_slave/buzzer.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_wifi/adri_wifi.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_alarm.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_alarm_buzzer.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/alarmclock_event.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_home.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/player_alarm.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/alarmclock.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_slave/reveill_slave.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/adri_timeNtp.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/udp.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/reveilMultiFonctions.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/adri_tft_ILI9341_screen.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_slave/pitches.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_slave/buzzer.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/Time-master/Time.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_slave/_config_base.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_timer/adri_timer.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_timer/adri_timer.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/DHTDS_SERVER_AP/udp_func.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_espwebserver/adri_espwebserver.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_slave/include.h",
+		"/E/Arduino/Arduino_Projet/Projet/DHTDS_SERVER_AP/buzzer.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_calendar_event/examples/examples_1/examples_1.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/Time-master/TimeLib.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/adri_webserver_reponse.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/adri_webserver_reponse.h",
+		"/C/Users/adri/Desktop/c++/drawst.h",
+		"/E/Arduino/Arduino_Projet/Exemples/reveill/ebc_alarmclock_20191225-share/ebc_alarmclock_20191225/ebc_alarmclock_20191225.ino",
+		"/E/Arduino/Arduino_Projet/Exemples/reveill/108776874/affichage_RTC_Bouton_MP3_Menu_Alarme_v1/affichage_RTC_Bouton_MP3_Menu_Alarme_v1.ino",
+		"/C/Users/adri/Desktop/c++/bxk createrect2.h",
+		"/C/Users/adri/Desktop/c++/tft_dualdigitalclock_rtc2_ino.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tools/adri_tools.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/request_command.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/request_command.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/request.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tools/adri_tools.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/adri_webserver_reponselist.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/adri_webserver_parsecommand.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/adri_webserver_reponselist.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/examples/examples_1/examples_1.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/request_appi.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/event.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/adri_timeNtp.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/pattern_object_command.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_alarm.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_dfplayer/examples/esp8266/esp8266.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_dfplayer/adri_dfplayer.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_dfplayer/adri_dfplayer.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/request_reponse.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/DFRobotDFPlayerMini-master/examples/GetStarted/GetStarted.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/DFRobotDFPlayerMini-master/DFRobotDFPlayerMini.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ws_init.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_httparseurl/adri_webserver_parsecommand.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/udp_func.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/request_appi.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/request_reponse_name.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/pattern_object_get.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/request_reponse.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/request_command.cpp",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/pattern_object_command.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/request_command_name.h",
+		"/C/Users/adri/Documents/Arduino/libraries/SevSeg-master/src/SevSeg.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/adri_tft_ILI9341_ui.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_alarm_week.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_alarm_day.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/tft_touch.cpp",
+		"/C/Users/adri/Desktop/foldertemp/SmartAlarmClock-master/SmartAlarmClock/SmartAlarmClock.ino",
+		"/E/Arduino/Arduino_Projet/Exemples/TimeAlarms-master/TimeAlarms.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_alarm_edit.h",
+		"/C/Users/adri/Desktop/four_seven_led/four_seven_led.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/SevSeg-master/examples/SevSeg_Counter/SevSeg_Counter.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/SevSeg-master/examples/Bubble_Display_Counter/Bubble_Display_Counter.ino",
+		"/C/Users/adri/Documents/Arduino/libraries/SevSeg-master/examples/Bubble_Display_Text/Bubble_Display_Text.ino",
+		"/E/Arduino/Arduino_Projet/Exemples/RGB/hoop_wip/data/_sliders.js",
+		"/C/Users/adri/Documents/Arduino/libraries/DFRobotDFPlayerMini-master/DFRobotDFPlayerMini.h",
+		"/C/Users/adri/AppData/Local/Temp/Temp1_neopixel_simulator.zip/neopixel_simulator.pde",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/player_alarm.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/adri_tft_ILI9341_ui.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_mp3.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_clock.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/player_ui.cpp",
+		"/C/Users/adri/Desktop/04/fileLis.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_home.h",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta/tft_screen.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_cfg_tft.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_functions.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/adri_tft_ILI9341_txt.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_functions.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/adri_tft_ILI9341_txt.h",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/data/js/core.js",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/adri_tft_ILI9341_button.cpp",
+		"/C/Users/adri/Desktop/pull/pull.ino",
+		"/C/Program Files (x86)/Arduino/examples/02.Digital/Button/Button.ino",
+		"/E/Arduino/Arduino_Projet/Projet/MULTILAMP/MULTILAMP.ino",
+		"/E/Arduino/Arduino_Projet/Projet/reveill_beta - Copie/tft_display.cpp",
+		"/C/Users/adri/Documents/Arduino/libraries/adri_tft_ILI9341/examples/reveilMultiFonctions/ui_colors.cpp",
+		"/C/Users/adri/Desktop/foldertemp/ps_switch/ps_switch.ino"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"E:\\Arduino\\Arduino_Projet\\Projet_sublimeTexte\\df_server.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 330.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
