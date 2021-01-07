@@ -1,11 +1,10 @@
 # ADS
 Local smart home - esp8266 - ws2812b, SK6812, Relay<br><br>
 
-Smart home essentiellement créer pour l'éclairage led d'une maison.<br>
-Réseau local connecter à un routeur wifi.<br>
+Smart home essentiellement créer pour l'éclairage led d'une maison.<br><br>
 Le principe :<br>
 > Un module ou plusieurs module server, et un ou plusieurs module client.<br>
-> Les modules seront tous connecter au même serveur et communiqueront ensemble via UDP.<br>
+> Les modules seront tous connecter au même routeur WIFI et communiqueront ensemble via UDP.<br>
 > Les modules server servirons d’interface(application Android, web-server, écran TFT) de liaison entre les modules client.
 
 ## Partie server
