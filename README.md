@@ -27,7 +27,6 @@
 * by Arduinojson
   * ![arduinojson](https://github.com/bblanchon/ArduinoJson)
   
-<br>  
 
 ## /esp8266/server_oled /
 ### Description 
