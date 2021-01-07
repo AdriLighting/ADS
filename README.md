@@ -34,3 +34,15 @@
 * ![DA_COMMON](https://github.com/AdriLighting/DA_COMMON)
 ### Librairies additionnelles by AdriLighting
 * ![adri_oled_menu_128x64](https://github.com/AdriLighting/adri_oled_menu_128x64)
+* ![adri_calendar_event](https://github.com/AdriLighting/adri_calendar_event)
+### librairies additionnelles
+* by Arduinojson
+  * ![arduinojson](https://github.com/bblanchon/ArduinoJson)
+* by Adafruit 
+  * ![ST7735](https://github.com/adafruit/Adafruit-ST7735-Library)
+  * ![Adafruit_Sensor](https://github.com/adafruit/Adafruit_Sensor)  
+  * ![DHT](https://github.com/adafruit/DHT-sensor-library)  
+ * by squix78    
+  * ![json-streaming-parser](https://github.com/squix78/json-streaming-parser)
+ * by PaulStoffregen
+  * ![TimeLib](https://github.com/PaulStoffregen/Time) 
