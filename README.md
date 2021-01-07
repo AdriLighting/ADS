@@ -14,9 +14,9 @@
 > udp server piloted via android application
 ### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
-#### Librairies ADS by AdriLighting
+#### Librairies ADS
 * ![DA_COMMON](https://github.com/AdriLighting/DA_COMMON)
-#### Librairies additionnelles by AdriLighting
+#### Librairies additionnelles
 * ![adri_espwebserver](https://github.com/AdriLighting/adri_espwebserver)
 * ![adri_httparseurl](https://github.com/AdriLighting/adri_httparseurl)
 * ![adri_wifiConnect](https://github.com/AdriLighting/adri_wifiConnect)
@@ -33,9 +33,9 @@
 > udp server piloted via push-button and oled-display(128x64)
 ### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
-#### Librairies ADS by AdriLighting
+#### Librairies ADS
 * ![DA_COMMON](https://github.com/AdriLighting/DA_COMMON)
-#### Librairies additionnelles by AdriLighting
+#### Librairies additionnelles
 * ![adri_oled_menu_128x64](https://github.com/AdriLighting/adri_oled_menu_128x64)
 * ![adri_calendar_event](https://github.com/AdriLighting/adri_calendar_event)
 #### librairies additionnelles
