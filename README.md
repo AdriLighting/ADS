@@ -9,7 +9,7 @@
 <br>
 
 # Partie server
-## /esp8266/server/
+## [/esp8266/server/](https://github.com/AdriLighting/ADS/tree/main/esp8266/server)
 ### Description 
 > udp server piloted via android application
 ### Librairies 
@@ -28,7 +28,7 @@
   * ![arduinojson](https://github.com/bblanchon/ArduinoJson)
   
 
-## /esp8266/server_oled /
+## [/esp8266/server_oled /](https://github.com/AdriLighting/ADS/tree/main/esp8266/server_oled)
 ### Description 
 > udp server piloted via push-button and oled-display(128x64)
 ### Librairies 
