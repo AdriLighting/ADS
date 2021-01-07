@@ -1,12 +1,21 @@
 # ADS
 Local smart home - esp8266 - ws2812b, SK6812, Relay<br><br>
 
+Smart home essentiellement créer pour l'éclairage led d'une maison.<br>
+Réseau local connecter à un routeur wifi.<br>
+Le principe :<br>
+> Un module ou plusieurs module server, et un ou plusieurs module client.<br>
+> Les modules seront tous connecter au même serveur et communiqueront ensemble via UDP.<br>
+> Les modules server servirons d’interface(application Android, web-server, écran TFT) de liaison entre les modules client.
+
 ## Partie server
 #### ADS/esp8266/server/
 ###### Decriptions 
     udp server piloted via android application
 ###### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
+###### Librairies ADS
+* ![DA_COMMON](https://github.com/AdriLighting/DA_COMMON)
 ###### Librairies additionnelles by AdriLighting
 * ![adri_espwebserver](https://github.com/AdriLighting/adri_espwebserver)
 * ![adri_httparseurl](https://github.com/AdriLighting/adri_httparseurl)
