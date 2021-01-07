@@ -9,7 +9,7 @@ Le principe :<br>
 
 ## Partie server
 #### ADS/esp8266/server/
-###### Decriptions 
+Decriptions :<br>
 > udp server piloted via android application
 ###### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
