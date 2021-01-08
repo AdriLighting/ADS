@@ -56,8 +56,8 @@
 
 ## [/esp8266/client/](https://github.com/AdriLighting/ADS/tree/main/esp8266/client)
 ### Description 
-> udp client for driving led-strip or relay
-> can be piloted by own server or by commmun server
+> udp client for driving led-strip or relay.<br>
+> can be piloted by own server or by commmun server.
 ### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
 #### Librairies ADS
