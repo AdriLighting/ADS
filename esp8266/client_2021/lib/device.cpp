@@ -87,7 +87,7 @@ device * devicePtr = nullptr;
 device * devicePtrGet(){return devicePtr;}
 device::device(){devicePtr = this; new device_mod();}
 void device::setup(){
-	
+	//test
 }
 /*
 
