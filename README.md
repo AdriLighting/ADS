@@ -50,3 +50,17 @@
   * ![json-streaming-parser](https://github.com/squix78/json-streaming-parser)
 * by PaulStoffregen
   * ![TimeLib](https://github.com/PaulStoffregen/Time) 
+  
+</br>
+<hr>
+
+## [/esp8266/client/](https://github.com/AdriLighting/ADS/tree/main/esp8266/client)
+### Description 
+> udp server piloted via push-button and oled-display(128x64)
+### Librairies 
+- dowload to "\Users\You\Documents\Arduino\libraries"
+#### Librairies ADS
+* ![DA_COMMON](https://github.com/AdriLighting/DA_COMMON)
+#### librairies additionnelles
+* by kriegsman
+  * ![FastLED](https://github.com/FastLED/FastLED)
