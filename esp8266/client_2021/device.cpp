@@ -197,7 +197,9 @@ void set_def(){
 
     String ret;
     ptr->get_oType(ret);
+    
     Serial.println(ret);
+
 }
 
 
