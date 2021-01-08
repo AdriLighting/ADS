@@ -64,3 +64,9 @@
 #### librairies additionnelles
 * by kriegsman
   * ![FastLED](https://github.com/FastLED/FastLED)
+* by Adafruit
+  * ![Adafruit_NeoPixel](https://github.com/adafruit/Adafruit_NeoPixel)
+* by me-no-dev
+  * ![ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)  
+* by PaulStoffregen
+  * ![TimeLib](https://github.com/PaulStoffregen/Time)  
