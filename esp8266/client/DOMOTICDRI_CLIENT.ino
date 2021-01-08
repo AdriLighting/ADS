@@ -56,7 +56,7 @@ void setup() {
 
 	output_preset_load(false);
 
-	_wfifi_connect(0, "freebox_123_EXT", "phcaadax", device_ip, DEVICENAME, false, false);	
+	_wfifi_connect(0, "ssid", "pswd", device_ip, DEVICENAME, false, false);	
 	server_setup();
 	telnet_setup();
 	udp_start();
