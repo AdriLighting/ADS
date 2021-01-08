@@ -8,7 +8,7 @@
 > Les modules server servirons d’interface(application Android, web-server, écran TFT) de liaison entre les modules client.
 <br>
 
-# Partie server
+# SERVER
 ## [/esp8266/server/](https://github.com/AdriLighting/ADS/tree/main/esp8266/server)
 ### Description 
 > udp server piloted via android application
@@ -27,6 +27,7 @@
 * by Arduinojson
   * ![arduinojson](https://github.com/bblanchon/ArduinoJson)
   
+<hr>
 
 ## [/esp8266/server_oled /](https://github.com/AdriLighting/ADS/tree/main/esp8266/server_oled)
 ### Description 
