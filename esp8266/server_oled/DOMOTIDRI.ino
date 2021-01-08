@@ -105,7 +105,7 @@ void setup() {
 	    
 	// CONNECT TO WIFI
 	IPAddress 	ip(192, 168, 0, 141);
-	_wfifi_connect(0, "freebox_123_EXT", "phcaadax", ip, DEVICENAME, false, false); 
+	_wfifi_connect(0, "ssid", "pswd", ip, DEVICENAME, false, false); 
 
 	// INIT WEBSERVER	
 	debug_webSocketServer 	= true;		
