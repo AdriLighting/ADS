@@ -10,6 +10,8 @@
 
 ## [/esp8266/server/](https://github.com/AdriLighting/ADS/tree/main/esp8266/server)
 ### Description 
+### Description 
+> updated server librairie, work in progress..
 > udp server piloted via android application
 ### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
@@ -26,6 +28,17 @@
 * by Arduinojson
   * ![arduinojson](https://github.com/bblanchon/ArduinoJson)
   
+</br>
+<hr>
+
+## [/esp8266/client_2021/](https://github.com/AdriLighting/ADS/tree/main/esp8266/client_2021)
+### Description 
+> updated client librairie, work in progress...
+> udp client for driving led-strip or relay.<br>
+> can be piloted by own server or by commmun server.
+### Librairies 
+- dowload to "\Users\You\Documents\Arduino\libraries"
+
 </br>
 <hr>
 
