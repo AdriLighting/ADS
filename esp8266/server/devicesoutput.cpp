@@ -343,6 +343,14 @@ String output_edit::get_output_info(mod_outputs_type *pos, int count){
     }
     return ret;
 }
+void output_edit::get_output_info(mod_outputs_type *pos, int count, JsonArray & object){
+    // fsprintf("[get_output_info]\n");
+    for( int j = 0; j < count; j++) {
+        String v = output_type_to_string(pos[j]);
+        object.add(v);
+        // fsprintf("\t%S\n",v.c_str());
+    }
+}
 String output_edit::get_output_info(mod_devices_room *pos, int count){
     String ret;
     for( int j = 0; j < count; j++) {
@@ -351,6 +359,14 @@ String output_edit::get_output_info(mod_devices_room *pos, int count){
             else ret += v;
     }
     return ret;
+}
+void output_edit::get_output_info(mod_devices_room *pos, int count, JsonArray & object){
+    // fsprintf("[get_output_info]\n");
+    for( int j = 0; j < count; j++) {
+        String v = devices_room_to_string(pos[j]);
+        object.add(v);
+        // fsprintf("\t%S\n",v.c_str());
+    }
 }
 String output_edit::get_output_info(mod_devices_grp *pos, int count){
     String ret;
@@ -361,14 +377,32 @@ String output_edit::get_output_info(mod_devices_grp *pos, int count){
     }
     return ret;
 }
+void output_edit::get_output_info(mod_devices_grp *pos, int count, JsonArray & object){
+    // fsprintf("[get_output_info]\n");
+    for( int j = 0; j < count; j++) {
+        String v = devices_grp_to_string(pos[j]);
+        object.add(v);
+        // fsprintf("\t%S\n",v.c_str());
+    }
+}
 String output_edit::get_output_info(String *pos, int count){
+    // fsprintf("\n[get_output_info]\n");
     String ret;
     for( int j = 0; j < count; j++) {
         String v = pos[j];
             if ( j < count -1) ret += v + ";";
             else ret += v;
+            // fsprintf("\t%S\n",v.c_str());
     }
     return ret;
+}
+void output_edit::get_output_info(String *pos, int count, JsonArray & object){
+    // fsprintf("[get_output_info]\n");
+    for( int j = 0; j < count; j++) {
+        String v = pos[j];
+        object.add(v);
+        // fsprintf("\t%S\n",v.c_str());
+    }
 }
 String output_edit::get_output_info(bool *pos, int count){
     String ret;
@@ -379,6 +413,14 @@ String output_edit::get_output_info(bool *pos, int count){
     }
     return ret;
 }
+void output_edit::get_output_info(bool *pos, int count, JsonArray & object){
+    // fsprintf("[get_output_info]\n");
+    for( int j = 0; j < count; j++) {
+        String v = String(pos[j]);
+        object.add(v);
+        // fsprintf("\t%S\n",v.c_str());
+    }
+}
 String output_edit::get_output_info(int *pos, int count){
     String ret;
     for( int j = 0; j < count; j++) {
@@ -387,6 +429,14 @@ String output_edit::get_output_info(int *pos, int count){
             else ret += v;
     }
     return ret;
+}
+void output_edit::get_output_info(int *pos, int count, JsonArray & object){
+    // fsprintf("[get_output_info]\n");
+    for( int j = 0; j < count; j++) {
+        String v = String(pos[j]);
+        object.add(v);
+        // fsprintf("\t%S\n",v.c_str());
+    }
 }
 String output_edit::get_output_info(uint8_t *pos, int count){
     String ret;
@@ -397,7 +447,14 @@ String output_edit::get_output_info(uint8_t *pos, int count){
     }
     return ret;
 }
-
+void output_edit::get_output_info(uint8_t *pos, int count, JsonArray & object){
+    // fsprintf("[get_output_info]\n");
+    for( int j = 0; j < count; j++) {
+        String v = String(pos[j]);
+        object.add(v);
+        // fsprintf("\t%S\n",v.c_str());
+    }
+}
 
 boolean output_edit::output_isRelay(mod_outputs_type type) {
     if (type == OT_RGBSTRIP) return false;

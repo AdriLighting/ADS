@@ -35,7 +35,8 @@ void udp_server::udp_loop(){
 void udp_server::udp_send(String msg){
 	if (udpServer==nullptr) return;
 	udpServer->send(msg);
-	Serial.printf("\n[udp_send]\n%s\n",msg.c_str());
+	unsigned int msg_length = msg.length();
+	// Serial.printf("\n[udp_send] size: %d\n%s\n",msg_length, msg.c_str());
 
 }
 
@@ -55,7 +56,8 @@ void udp_server::udpMulti_send(String msg){
 	if (udpMultiServer==nullptr) return;
     msg = literal_item("server_send", "1") + msg;
 	udpMultiServer->send(msg);
-	fsprintf("\n[udpMulti_send]\n%s\n",msg.c_str());
+	unsigned int msg_length = msg.length();
+	// fsprintf("\n[udpMulti_send] size: %d\n%s\n",msg_length, msg.c_str());
 }
 
 

@@ -4,7 +4,13 @@
 #include <adri_webserver_reponse.h>
 #include <adri_webserver_parsecommand.h>
 #include <adri_wifiConnect.h>
+namespace {
 
+    const size_t serializeSize = 512 * 20;
+
+
+
+}
     // server.on("/request_pattern",  HTTP_GET,  [](AsyncWebServerRequest *request)  { 
     //     request_command(request);
     //     String rep = setReponseJson(0, "", false);
@@ -67,7 +73,7 @@ void devicesManage::udpParse(String udp_msg) {
 
     // #ifdef WEBSERVER_ENABLE
         String disp = msg + "\n";
-        fsprintf("\n[udpParse]\n%s",disp.c_str());
+        // fsprintf("\n[devicesManage::udpParse]\n%s",disp.c_str());
         String rep;
         String op =     literal_value("op",     msg);
         String uMsg =   literal_value("msg",    msg);
@@ -298,6 +304,74 @@ String devicesManage::list_devicesOutput(){
     }  
     return list;
 }
+void devicesManage::list_devicesOutput(JsonObject & object) {
+    JsonObject  objectId ;
+    String      value;  
+    String      dn;
+    int         oc;
+    // fsprintf("\n[list_devicesOutput]\n");
+    for (int i = 0; i < MAX_DEVICES; ++i) {
+
+        dn = devices_array[i].device_name;
+        if (dn == "") continue;
+
+        // fsprintf("[%s]\n", dn.c_str());
+
+        objectId = object.createNestedObject(String(i));
+
+        objectId[F("dn")] = dn;
+        objectId[F("co")] = devices_array[i].isConnected;
+        // if (calendar_array[i]->period == dtDailyAlarm)   objectId[F("lapse")] = String("-1");
+        // else                                             objectId[F("lapse")] = calendar_array[i]->o_endValue;
+        // objectId[F("repeat")]    =   calendar_array[i]->repeat;
+        // objectId[F("value")]     =   calendar_array[i]->startTime;
+        // objectId[F("activ")]     =   String(calendar_array[i]->isEnabled);
+        oc = devices_array[i].output_count;
+        JsonArray array = objectId.createNestedArray(F("oLoc"));
+        _output_edit->get_output_info(devices_array[i].output_location, oc, array);
+        array = objectId.createNestedArray(F("oGrp"));
+        _output_edit->get_output_info(devices_array[i].output_grp,  oc, array);
+        array = objectId.createNestedArray(F("oTog"));
+        _output_edit->get_output_info(devices_array[i].toggleOnOff, oc, array);
+        array = objectId.createNestedArray(F("oCol"));
+        _output_edit->get_output_info(devices_array[i].strip_color, oc, array);
+        array = objectId.createNestedArray(F("oTw"));
+        _output_edit->get_output_info(devices_array[i].trueWhite, oc, array);    
+        // array = objectId.createNestedArray(F("oCon"));
+        // _output_edit->get_output_info(devices_array[i].isConnected, oc, array); 
+        array = objectId.createNestedArray(F("oSel"));
+        _output_edit->get_output_info(devices_array[i].output_selected, oc, array);  
+        array = objectId.createNestedArray(F("oHsv"));
+        for( int j = 0; j < oc; j++) {
+            String v = String(devices_array[i].strip_hue[j])+"."+ String(devices_array[i].strip_sat[j])+"."+ String(devices_array[i].strip_hBri[j]);
+            array.add(v);
+        }                     
+        // array = objectId.createNestedArray(F("oHsv"));
+        // _output_edit->get_output_info(devices_array[i].strip_color, oc, array);
+    }   
+
+
+}
+void devicesManage::list_devicesOutput_jsonFile(String & result) {
+    fsprintf("\n[list_devicesOutput_jsonFile]\n");
+    DynamicJsonDocument json(serializeSize);
+    JsonObject  root    = json.to<JsonObject>();
+    JsonObject  object  = root.createNestedObject("l_o");
+    list_devicesOutput(object);
+    serializeJson(json, Serial);
+}
+void devicesManage::list_devicesOutput_jsonFile() {
+    // File file = SPIFFS.open("/json/events.json", "w");
+    // if (file) {
+    //     DynamicJsonDocument json(serializeSize);
+    //     JsonObject  root    = json.to<JsonObject>();
+    //     root["selected"]    = ch_toString(events_spiff_list[appi_event_select]._id);
+    //     JsonObject  object  = root.createNestedObject("eventslist");
+    //     events_jsonObject(object);
+    //     serializeJson(json, file);
+    //     file.close();
+    // }       
+}
 String devicesManage::list_devices(){
     boolean     start = true;
     String      s_json;
@@ -329,6 +403,9 @@ String devicesManage::list_group(){
 String devicesManage::appi_rep_loop(String op){
     String      s_json;
 
+    // String json;
+    // list_devicesOutput_jsonFile(json) ;
+    
     String lo = list_devicesOutput(); 
     String lg = list_group();
 
@@ -368,7 +445,7 @@ int oledRequest::search_device(String search){
             break;
         }
     }
-    Serial.printf("[search_device] : %s - ret: %d\n",search.c_str(), ret );
+    Serial.printf("\n[search_device] : %s - ret: %d\n",search.c_str(), ret );
     return ret;
 }
 void oledRequest::upd_device(String search){
@@ -409,11 +486,11 @@ boolean oledRequest::canSend(){
 
     // String d = "\ncansend - cnt: " + String(oled_request.cnt) + "\n";
     // debug(&d);
-
+    fsprintf("\n[oledRequest::canSend]\n");
     for( int i = 0; i < oled_request.cnt; i++) { 
         if(oled_request.device[i][1] != "") {  
             cnt++;
-            Serial.printf("[canSend] add: %s - %d/%d\n", oled_request.device[i][0].c_str(), cnt, oled_request.cnt);          
+            Serial.printf("\tadd: %s - %d/%d\n", oled_request.device[i][0].c_str(), cnt, oled_request.cnt);          
 
         } else {
             String send;

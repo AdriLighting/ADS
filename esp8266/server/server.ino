@@ -86,8 +86,8 @@ void setup()
 	wifi_credential_sta_fromSPIFF();
 	wifi_credential_set(
 		0, 						
-		"ssid", 		
-		"pswd", 			
+		"freebox_123_EXT", 		
+		"phcaadax", 			
 		"",						
 		"",						
 		""						

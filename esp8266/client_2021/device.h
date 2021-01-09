@@ -148,7 +148,10 @@ public:
 	void set_pSelect(int value[]);
 	void get_pSelect(String & ret);
 
+	void print_output(String title, String str);
+
 };
 device * devicePtrGet();
 void set_def();
+void print_output();
 #endif

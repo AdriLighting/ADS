@@ -3,6 +3,7 @@
 
 #include "include.h"
 #include "serverudp.h"
+#include <ArduinoJson.h>
 
         struct oled_requests {
             int cnt;
@@ -77,6 +78,9 @@ class devicesManage
 
 		void loop();
 
+		void list_devicesOutput_jsonFile();
+		void list_devicesOutput_jsonFile(String & object);
+		void list_devicesOutput(JsonObject & object);
 		String list_devicesOutput();
 		String list_devices();
 		String list_group();

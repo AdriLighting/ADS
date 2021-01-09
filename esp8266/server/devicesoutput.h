@@ -2,6 +2,7 @@
 #define DEVICESOUTPUT_H 
 
     #include <arduino.h>
+    #include <ArduinoJson.h>
 
 	#include "def.h"
 	#include "devices_mod.h"
@@ -38,6 +39,13 @@
         String get_output_info(bool *pos, int count);
         String get_output_info(int *pos, int count);
         String get_output_info(uint8_t *pos, int count);
+        void get_output_info(mod_outputs_type *pos, int count, JsonArray & object);
+        void get_output_info(mod_devices_room *pos, int count, JsonArray & object);
+        void get_output_info(mod_devices_grp *pos, int count, JsonArray & object);
+        void get_output_info(String *pos, int count, JsonArray & object);
+        void get_output_info(bool *pos, int count, JsonArray & object);
+        void get_output_info(int *pos, int count, JsonArray & object);
+        void get_output_info(uint8_t *pos, int count, JsonArray & object);
 
         boolean output_isRelay      (mod_outputs_type type);
         boolean output_isStrip      (mod_outputs_type type);
