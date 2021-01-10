@@ -1,9 +1,11 @@
 #ifndef DEVICES_H
 #define DEVICES_H 
-
 #include "include.h"
 #include "serverudp.h"
 #include <ArduinoJson.h>
+#include <adri_timer.h>
+
+
 
         struct oled_requests {
             int cnt;
@@ -65,7 +67,8 @@ class devicesManage
 	devices 		* _devices;
 	oledRequest 	* _oledRequest;
 	appiUdp 		* _appiUdp;
-
+	adri_timer 		* _timer_upd;
+	
 	public:
 		devicesManage();
 		~devicesManage();

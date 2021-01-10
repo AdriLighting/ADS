@@ -155,3 +155,5 @@ device * devicePtrGet();
 void set_def();
 void print_output();
 #endif
+
+

@@ -57,7 +57,8 @@ devicesManage::devicesManage(){
 	_output_edit 	= new output_edit();
     _devices_spiff  = new devicesspiff();
     _oledRequest    = new oledRequest();
-	_appiUdp        = new appiUdp();
+    _appiUdp        = new appiUdp();
+	_timer_upd		= new adri_timer(5000, "", false);
 	_devices_spiff->deviceSpiff_load();
 
 }
@@ -142,26 +143,63 @@ void devicesManage::udpMultiParse(String req){
     String  op      = literal_value("op",           req);
     String  preset 	= literal_value("preset",  		req);
 
-    // fsprintf("\n[udpMultiParse]\n\t[server: %s][op: %s][preset: %s]\n", server.c_str(), op.c_str(), preset.c_str());
     
     if (preset != "") return;
+
+    if ( (op == "upd_websocket") && (!_oledRequest->oled_request.send) ) {
+
+        _oledRequest->clear();
+
+        String 	msg = literal_value("msg", req);
+        String 	list[MAX_DEVICES];
+        int 	count = explode(msg, ';', list);
+        for( int j = 0; j < count-1; j++) {
+        	int cnt = _oledRequest->oled_request.cnt;
+            _oledRequest->oled_request.device[cnt][0] = list[j];
+            _oledRequest->oled_request.device[cnt][1] = "";
+            _oledRequest->oled_request.cnt++;        
+        }
+
+        #ifdef DEBUG
+        	Serial.printf("\noled_request_start\nlist: %s\n", msg.c_str());
+        #endif
+
+       _oledRequest->start();
+
+    }
+
 
     String udp_hsv_req = literal_value( "udp_hsv_req",  req);
     if (udp_hsv_req == "0") {
         _appiUdp->udp_wait_for_hsvLoop = false;
+
         String rep = appi_rep_loop("udp_list");
-        udp_serverPtr_get()->udp_send(rep);              
+        udp_serverPtr_get()->udp_send(rep);  
+
         // webserverSend_list_devicesOutput_toSocket(); 
+
         return;
+
     } else if (udp_hsv_req == "1") {
         _appiUdp->udp_wait_for_hsvLoop = true;
         return;
     }
 
+
     String 	dn 	    = literal_value("dn",           req);
     String 	ip 	    = literal_value("ip",           req);
     String 	str     = literal_value("add",          req);
 
+
+    // if (op == "upd_websocket") {
+    // 	_timer_upd->activate();
+    //     fsprintf("\n[udpMultiParse upd_websocket]\n\t[server: %s][op: %s][preset: %s][dn: %s]\n", 
+    //         server.c_str(), 
+    //         op.c_str(), 
+    //         preset.c_str(),
+    //         dn.c_str()
+    //     );
+    // }
     if (_devices_spiff->deviceSpiff_search(dn) < 0) {
 
     	if ((str != "") && (op == "add") && (server == "")  && (dn != "")) {
@@ -189,21 +227,31 @@ void devicesManage::udpMultiParse(String req){
 
                     _output_edit->update(_output_edit);
 
-                    if (_appiUdp->udp_appi_rep) {
+                    // if (_appiUdp->udp_appi_rep) {
                         if ((!_appiUdp->udp_wait_for_hsvLoop) && (op == "rep")) {
                             if (_oledRequest->oled_request.send) {
+								    fsprintf("\n[udpMultiParse 2]\n\t[server: %s][op: %s][preset: %s][dn: %s]\n", 
+								        server.c_str(), 
+								        op.c_str(), 
+								        preset.c_str(),
+								        dn.c_str()
+								    );                               	
                                 _oledRequest->upd_device(dn); 
                                 if (_oledRequest->canSend()){
+
+  
+
                                     // webserverSend_selected_devicesOutput_toSocket();
                                     String rep = appi_rep_loop("udp_list");
                                     udp_serverPtr_get()->udp_send(rep);      
                                     _oledRequest->end();
+
                                 }                                
                             } else {
                                 // webserverSend_list_devicesOutput_toSocket();
                             }
                         }
-                    } 
+                    // } 
                 }
             }    	
     }
@@ -445,12 +493,19 @@ int oledRequest::search_device(String search){
             break;
         }
     }
-    Serial.printf("\n[search_device] : %s - ret: %d\n",search.c_str(), ret );
+    #ifdef DEBUG
+    	fsprintf("\n[oledRequest::search_device] : %s - ret: %d\n",search.c_str(), ret );
+    #endif
     return ret;
 }
 void oledRequest::upd_device(String search){
     int sc = search_device(search);
-    if (sc >= 0) { oled_request.device[sc][1] = "1"; }
+    if (sc >= 0) { 
+    	oled_request.device[sc][1] = "1"; 
+    	#ifdef DEBUG
+    		fsprintf("\n[oledRequest::upd_device] : %s\n", search.c_str());
+    	#endif
+    }
 }
 
 void oledRequest::end(){
@@ -486,11 +541,17 @@ boolean oledRequest::canSend(){
 
     // String d = "\ncansend - cnt: " + String(oled_request.cnt) + "\n";
     // debug(&d);
-    fsprintf("\n[oledRequest::canSend]\n");
+    #ifdef DEBUG
+    	fsprintf("\n[oledRequest::canSend]\n");
+    #endif
+
     for( int i = 0; i < oled_request.cnt; i++) { 
         if(oled_request.device[i][1] != "") {  
             cnt++;
-            Serial.printf("\tadd: %s - %d/%d\n", oled_request.device[i][0].c_str(), cnt, oled_request.cnt);          
+
+            #ifdef DEBUG
+            	fsprintf("\tadd: %s - %d/%d\n", oled_request.device[i][0].c_str(), cnt, oled_request.cnt);          
+            #endif
 
         } else {
             String send;

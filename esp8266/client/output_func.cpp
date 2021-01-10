@@ -60,6 +60,7 @@ int string_to_int(String v) {
     int ret = v.toInt();
     return ret;
 }
+
 void output_save_load(String s) {
     // Serial.printf("\n[output_save_load]\n");
 
@@ -67,10 +68,10 @@ void output_save_load(String s) {
     int count_2;
     int count_3;
 
-    String list[50];
-
-    String list_o[50];
-
+    String list   [50];
+    
+    String list_o [50];
+    
     String list_oi[50];
 
     count_1 = explode(s, '#', list);

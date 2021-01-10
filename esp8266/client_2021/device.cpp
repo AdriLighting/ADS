@@ -1,6 +1,7 @@
 #include "device.h"
 #include <adri_tools.h>
 
+
 device_mod * device_modPtr = nullptr;
 device_mod * device_modPtrGet(){return device_modPtr;}
 device_mod::device_mod(){device_modPtr = this;}
