@@ -6,6 +6,23 @@
 > Un module ou plusieurs module server, et un ou plusieurs module client.<br>
 > Les modules seront tous connecter au même routeur WIFI et communiqueront ensemble via UDP.<br>
 > Les modules server servirons d’interface(application Android, web-server, écran TFT) de liaison entre les modules client.
+
+<hr>
+<pre>
+Client.
+    Envoie un message par udpMulticast tous les 3sec pour signaler leur état.
+    Envoie un message par udpMulticast a récéption d'une requête udpMulticast, http, socket.
+</pre>
+
+<hr>
+<pre>
+Server.
+    Réception udpMulticast
+        met a jour les données dynamique, sauvegarde le module dans un fichier SPIFF
+    Réception udp
+        - a
+</pre>
+
 <br>
 <hr>
 <br>
@@ -14,6 +31,7 @@
 ### Description 
 > updated server librairie, work in progress...<br>
 > udp server piloted via android application
+
 ### Librairies 
 - dowload to "\Users\You\Documents\Arduino\libraries"
 #### Librairies ADS
