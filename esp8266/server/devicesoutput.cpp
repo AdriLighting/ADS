@@ -6,13 +6,13 @@ output_edit * output_editPtr_get(){return output_editPtr;}
 output_edit::output_edit(){ 
     output_editPtr = this;
     
-    add("AMPLI",                 "ampli",        "center",           "",     "");
-    add("FLEUR",                 "fleur",        "center",           "",     "");
-    add("PLAFOND_LIT",           "celling_2",    "plafond",          "",     "");
-    add("PLAFOND_ENTER",         "celling_e",    "plafond",          "",     "");
-    add("PLAFOND_RELAY",         "ceiling",      "plafond",          "",     "");
-    add("SALON_CANAPE_RELAY",    "canape",       "salle a manger",   "salon",    "");
-    add("BUREAU_ECRAN",          "center",       "",                 "chambre",  "");
+    add("AMPLI",				"ampli",		"center",           "",			"");
+    add("FLEUR",				"fleur",        "center",           "",			"");
+    add("PLAFOND_LIT",			"celling_2",    "plafond",          "",			"");
+    add("PLAFOND_ENTER",		"celling_e",    "plafond",          "",			"");
+    add("PLAFOND_RELAY",		"ceiling",      "plafond",          "",			"");
+    add("SALON_CANAPE_RELAY",	"canape",       "salle a manger",   "salon",    "");
+    add("BUREAU_ECRAN",			"center",		"",					"chambre",  "");
 
     load();
     display(this);    

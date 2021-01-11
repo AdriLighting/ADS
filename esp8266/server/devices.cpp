@@ -161,7 +161,7 @@ void devicesManage::udpMultiParse(String req){
         }
 
         #ifdef DEBUG
-        	Serial.printf("\noled_request_start\nlist: %s\n", msg.c_str());
+        	fsprintf("\noled_request_start\nlist: %s\n", msg.c_str());
         #endif
 
        _oledRequest->start();
@@ -230,12 +230,14 @@ void devicesManage::udpMultiParse(String req){
                     // if (_appiUdp->udp_appi_rep) {
                         if ((!_appiUdp->udp_wait_for_hsvLoop) && (op == "rep")) {
                             if (_oledRequest->oled_request.send) {
-								    fsprintf("\n[udpMultiParse 2]\n\t[server: %s][op: %s][preset: %s][dn: %s]\n", 
-								        server.c_str(), 
-								        op.c_str(), 
-								        preset.c_str(),
-								        dn.c_str()
-								    );                               	
+								    
+            //                         fsprintf("\n[udpMultiParse 2]\n\t[server: %s][op: %s][preset: %s][dn: %s]\n", 
+								    //     server.c_str(), 
+								    //     op.c_str(), 
+								    //     preset.c_str(),
+								    //     dn.c_str()
+								    // );  
+
                                 _oledRequest->upd_device(dn); 
                                 if (_oledRequest->canSend()){
 
@@ -401,7 +403,9 @@ void devicesManage::list_devicesOutput(JsonObject & object) {
 
 }
 void devicesManage::list_devicesOutput_jsonFile(String & result) {
+
     fsprintf("\n[list_devicesOutput_jsonFile]\n");
+
     DynamicJsonDocument json(serializeSize);
     JsonObject  root    = json.to<JsonObject>();
     JsonObject  object  = root.createNestedObject("l_o");
