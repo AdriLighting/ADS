@@ -1,7 +1,6 @@
 #include "device.h"
 #include <adri_tools.h>
 
-
 device_mod * device_modPtr = nullptr;
 device_mod * device_modPtrGet(){return device_modPtr;}
 device_mod::device_mod(){device_modPtr = this;}
@@ -13,6 +12,8 @@ String device_mod::lib_str(mod_devices_lib name) {
     }
     return ret;
 }
+
+
 String device_mod::oRoom_str(mod_devices_room name) {
     String ret = ""; 
     switch (name) {

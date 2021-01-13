@@ -7,10 +7,6 @@
 #include "devices.h"
 #include "serverudp.h"
 
-#include <PubSubClient.h>
-#include <ArduinoJson.h>
-#include <ESP8266HTTPClient.h>
-
 #define DEBUG
 
 
@@ -45,13 +41,15 @@ adriTools_serialRead    * _serial;
 		#endif	
 		ALS_espwebserver	* _webserver;
 
+
+
 void setup()
 {
 	Serial.begin(115200);
 	delay(1000);
 	fsprintf("\n");
 
-	boolean _fsok = SPIFFS.begin();
+	SPIFFS.begin();
 
 	String  path = "/devcices_save.txt";
 	SPIFFS.remove(path);
@@ -69,8 +67,6 @@ void setup()
     _serial->cmd_item_add(1, "outputEdit_display",		"e", "", _serial_outputEdit_display);
     _serial->cmd_item_add(1, "_serial_freeHeap",		"r", "", _serial_freeHeap);
     _serial->cmd_item_add(1, "_serial_deviceDisplay",	"t", "", _serial_deviceDisplay);
-    // _serial->cmd_array(2, 1);
-    // _serial->cmd_item_add(2, "activateEffect",    		"p", "", _serial_alarmPrint);
 	_serial->menu();	
 
 
@@ -86,8 +82,8 @@ void setup()
 	wifi_credential_sta_fromSPIFF();
 	wifi_credential_set(
 		0, 						
-		"freebox_123_EXT", 		
-		"phcaadax", 			
+		"ssid", 		
+		"pswd", 			
 		"",						
 		"",						
 		""						
@@ -127,7 +123,7 @@ void setup()
 
 	webserver_reponse_setup();
 	_webserver = new ALS_espwebserver();
-	_webserver->serverFS(_fsok);
+	_webserver->serverFS(true);
 	// initialize_webserver();
 	_webserver->serverInitialize();
 	// begin_webserver();
@@ -151,15 +147,18 @@ void loop()
 
 String _serial_menu(String cmd, String value) {
     adriTools_serialReadPtr_get()->menu();
+    return "";
 }
 
 String _serial_ESPreset(String cmd, String value){
     ESP.restart();
+    return "";
 }	
 
 String _serial_freeHeap(String cmd, String value){
 	int freeHeap = ESP.getFreeHeap();
 	fsprintf("\n[freeHeap] %d", freeHeap);
+	return "";
 }		
 
 
