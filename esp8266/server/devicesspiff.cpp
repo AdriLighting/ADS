@@ -26,7 +26,7 @@
     int devicesspiff::deviceSpiff_toArray() {
 
         String  path = "/devcices_save.txt";
-        File    file = SPIFFS.open(path, "r");
+        File    file = LittleFS.open(path, "r");
 
         if (!file) return-1;
 
@@ -62,7 +62,7 @@
         #endif
 
         String  path = "/devcices_save.txt";
-        File    file = SPIFFS.open(path, "w");
+        File    file = LittleFS.open(path, "w");
         if (file) { 
             String lines = "";
             for( int j = 0; j < deviceSpiff_array_nbr; j++) {

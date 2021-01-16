@@ -23,7 +23,7 @@ void output_edit::load(){
     // Serial.printf("\n[output_edit::load]\n");
 
     String  path = "/devcices_output.txt";
-    File    file = SPIFFS.open(path, "r");
+    File    file = LittleFS.open(path, "r");
 
     if (!file) {
         count = -1; 
@@ -52,7 +52,7 @@ void outputEdit_setup(output_edit * ptr){
 
 int output_edit::spiffgetCount() {
     String  path = "/devcices_output.txt";
-    File    file = SPIFFS.open(path, "r");
+    File    file = LittleFS.open(path, "r");
 
     if (!file) return -1;
 
@@ -69,7 +69,7 @@ int output_edit::spiffgetCount() {
 }
 int output_edit::spiffToArray(String * array) {
     String  path = "/devcices_output.txt";
-    File    file = SPIFFS.open(path, "r");
+    File    file = LittleFS.open(path, "r");
 
     if (!file) return-1;
 
@@ -160,13 +160,13 @@ void output_edit::add(String device, String ouput, String group, String room, St
 
     String path = "/devcices_output.txt";
 
-    File file = SPIFFS.open(path, "r");
+    File file = LittleFS.open(path, "r");
 
     String line = "";
 
     if (!file) { 
         Serial.printf("[create file]\n");
-        file =  SPIFFS.open(path, "w");
+        file =  LittleFS.open(path, "w");
         line =  literal_item("dn",          device);
         line += literal_item("ouput",       ouput);        
         line += literal_item("group",       group);        
@@ -223,7 +223,7 @@ void output_edit::add(String device, String ouput, String group, String room, St
             line += temparay[i]+"\n";
         }  
         
-        file = SPIFFS.open(path, "w");
+        file = LittleFS.open(path, "w");
         file.print(line);                    
         file.close();
     }   
@@ -235,7 +235,7 @@ void output_edit::removeDevice(String device){
 
     String path = "/devcices_output.txt";
 
-    File file = SPIFFS.open(path, "r");
+    File file = LittleFS.open(path, "r");
 
     String line = "";
 
@@ -269,11 +269,11 @@ void output_edit::removeDevice(String device){
 
         line = "";
         for (int i = 0; i < ac; ++i) {
-            if (i = pos) continue;
+            if (i == pos) continue;
             line += temparay[i]+"\n";
         }  
         
-        file = SPIFFS.open(path, "w");
+        file = LittleFS.open(path, "w");
         file.println(line);                    
         file.close();
     }   
@@ -288,6 +288,7 @@ String output_edit::set_output_info(String s, int *pos){
     for( int j = 0; j < count; j++) {
         pos[j] = list[j].toInt();
     }
+    return "";
 }
 String output_edit::set_output_info(String s, mod_outputs_type *pos){
     String list[7];
@@ -295,6 +296,7 @@ String output_edit::set_output_info(String s, mod_outputs_type *pos){
     for( int j = 0; j < count; j++) {
         pos[j] = output_type_string_to_mod(list[j]);
     }
+    return "";
 }
 String output_edit::set_output_info(String s, mod_devices_room *pos){
     String list[7];
@@ -302,6 +304,7 @@ String output_edit::set_output_info(String s, mod_devices_room *pos){
     for( int j = 0; j < count; j++) {
         pos[j] = devices_room_string_to_mod(list[j]);
     }
+    return "";
 }
 String output_edit::set_output_info(String s, mod_devices_grp *pos){
     String list[7];
@@ -309,6 +312,7 @@ String output_edit::set_output_info(String s, mod_devices_grp *pos){
     for( int j = 0; j < count; j++) {
         pos[j] = devices_grp_string_to_mod(list[j]);
     }
+    return "";
 }
 String output_edit::set_output_info(String s, String *pos){
     String list[7];
@@ -316,6 +320,7 @@ String output_edit::set_output_info(String s, String *pos){
     for( int j = 0; j < count; j++) {
         pos[j] = list[j];
     }
+    return "";
 }
 String output_edit::set_output_info(String s, bool *pos){
     String list[7];
@@ -324,6 +329,7 @@ String output_edit::set_output_info(String s, bool *pos){
         if (list[j] == "0") pos[j] = false;
         else pos[j] = true;
     }
+    return "";
 }
 String output_edit::set_output_info(String s, uint8_t *pos){
     String list[7];
@@ -331,6 +337,7 @@ String output_edit::set_output_info(String s, uint8_t *pos){
     for( int j = 0; j < count; j++) {
         pos[j] = list[j].toInt();
     }
+    return "";
 }
 
 

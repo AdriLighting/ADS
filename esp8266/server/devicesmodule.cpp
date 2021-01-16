@@ -143,7 +143,7 @@ void devices::print(){
 }
 
 unsigned long   timer_udp_checkClient_lastChange_1;
-int             timer_udp_checkClient_1 = 3000;
+unsigned int    timer_udp_checkClient_1 = 3000;
 void devices::upd_udpDevices(){
     #ifdef OLED_ENABLE
         if (hsvb_loop != hsv_loop_n) return;

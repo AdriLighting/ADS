@@ -2,7 +2,7 @@
 	#define DEVICESEDIT_H 
 
     #include <arduino.h>
-    #include <FS.h>   
+    #include <LittleFS.h>   
 
 
     #define MAX_GROUPS          10

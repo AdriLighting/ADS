@@ -22,19 +22,21 @@ namespace {
 
     // }); 
 
-    int command_wifi_staSSID(String value)  {wifiConnect_instance()->_credential_sta->ssid_set(value);  wifi_credential_sta_toSpiff(); wifi_credential_sta_print();}    
-    int command_wifi_staPsk(String value)   {wifiConnect_instance()->_credential_sta->psk_set(value);   wifi_credential_sta_toSpiff(); wifi_credential_sta_print();}    
+    int command_wifi_staSSID(String value)  {wifiConnect_instance()->_credential_sta->ssid_set(value);  wifi_credential_sta_toSpiff(); wifi_credential_sta_print(); return 0;}    
+    int command_wifi_staPsk(String value)   {wifiConnect_instance()->_credential_sta->psk_set(value);   wifi_credential_sta_toSpiff(); wifi_credential_sta_print(); return 0;}    
     int command_wifi_sta(String value)      {
         wifiConnect_instance()->connect_set(AWC_LOOP);
         wifiConnect_instance()->connectSSID_set(AWCS_NORMAL);   
         wifiConnect_instance()->savToSpiff(); 
         ESP.restart();
+        return 0;
     }   
     int command_wifi_ap(String value)       {
         wifiConnect_instance()->connect_set(AWC_SETUP);
         wifiConnect_instance()->connectSSID_set(AWCS_AP);       
         wifiConnect_instance()->savToSpiff();
         ESP.restart();
+        return 0;
     }   
     requestCommandsLists requestEventCommandsList [] = {
         {"sta_ssid",        &command_wifi_staSSID,              "ALL",          NULL,   0},
@@ -69,6 +71,7 @@ void devicesManage::devices_print(){
 void devicesManage::outputEdit_print(){
 	_output_edit->display(_output_edit);
 }
+
 void devicesManage::udpParse(String udp_msg) { 
     String msg = udp_msg;  
 
@@ -86,7 +89,7 @@ void devicesManage::udpParse(String udp_msg) {
 
         if (op == "request_btn" ) { 
             // int c = getCommand(uMsg, "request_pattern", true); 
-            int c = getCommand( uMsg, "request_mod", true, requestEventCommandsListCount, requestEventCommandsList);
+            getCommand( uMsg, "request_mod", true, requestEventCommandsListCount, requestEventCommandsList);
             rep = appi_rep_loop("udpParse");
             udp_serverPtr_get()->udp_send(rep);            
         }
@@ -121,7 +124,7 @@ void devicesManage::udpParse(String udp_msg) {
                         }                                       
                         udp_serverPtr_get()->udpMulti_send(s2) ;  
         }else {
-            int c = getCommand( uMsg, "request_mod", true, requestEventCommandsListCount, requestEventCommandsList);
+            getCommand( uMsg, "request_mod", true, requestEventCommandsListCount, requestEventCommandsList);
         }
         // if (upd == "s_output") {
         //     rep = appi_rep_loop("udp_list");
@@ -319,7 +322,7 @@ int* splitColor(String Val) {
     return array;    
 }
 String devicesManage::list_devicesOutput(){
-    boolean     start = true;
+    // boolean     start = true;
     String      dn;
     String      list;
     int         oc;
@@ -340,7 +343,7 @@ String devicesManage::list_devicesOutput(){
             list += devices_array[i].output_grp[j] + ";";
             list += String(devices_array[i].toggleOnOff[j]) + ";";
             list += String(j) + ";";
-            int  *c = splitColor(devices_array[i].strip_color[j]);
+            // int  *c = splitColor(devices_array[i].strip_color[j]);
             list += devices_array[i].strip_color[j]+";";
             list += String(devices_array[i].strip_hue[j])+"."+ String(devices_array[i].strip_sat[j])+"."+ String(devices_array[i].strip_hBri[j])+";";
             list += String(devices_array[i].trueWhite[j])+";";
@@ -435,12 +438,11 @@ String devicesManage::list_devices(){
         list    += dn + ";";
     }  
     s_json = "{";
-    s_json += jsonAddStringValue(start, "list_dn", list);
+    s_json += jsonAddStringsValue(start, "list_dn", list);
     s_json += "}";
     return s_json;
 }
 String devicesManage::list_group(){
-    boolean     start = true;
     String      dn;
     String      list;
 
@@ -462,9 +464,9 @@ String devicesManage::appi_rep_loop(String op){
     String lg = list_group();
 
     s_json = "{";
-    s_json += jsonAddStringValue(true, "op", op);
-    s_json += jsonAddStringValue(false, "l_o", lo);
-    s_json += jsonAddStringValue(false, "l_g", lg);
+    s_json += jsonAddStringsValue(true, "op", op);
+    s_json += jsonAddStringsValue(false, "l_o", lo);
+    s_json += jsonAddStringsValue(false, "l_g", lg);
     s_json += "}";
     return s_json;
 }
@@ -472,9 +474,11 @@ String devicesManage::appi_rep_loop(String op){
 
 String _serial_deviceDisplay(String cmd, String value){
 	devicesManagePtr->devices_print();
+    return "";
 }		
 String _serial_outputEdit_display(String cmd, String value){
 	devicesManagePtr->outputEdit_print();
+    return "";
 }	
 
 
@@ -537,7 +541,8 @@ String oledRequest::sendString(){
     String send;
     send =  literal_item("op",  "upd_websocket");
     send += literal_item("msg", s);
-    udp_serverPtr_get()->udpMulti_send(send);        
+    udp_serverPtr_get()->udpMulti_send(send);     
+    return "";   
 }
 boolean oledRequest::canSend(){
     int cnt = 0;
@@ -665,6 +670,7 @@ boolean appiUdp::request_isTrueWhite(char * req){
 char *  appiUdp::request_getTrueWhite(char * req){
     if(req == req_lampBri)      return req_lampWhite;
     if(req == req_ss_lampBri)   return req_ss_white;
+    return req_lampWhite;
 }
 void appiUdp::appi_send_udpRequest_dn(String dn, char * req, String val, String upd) {
     // String disp = "oled_send_udpRequest_dn\n"; 

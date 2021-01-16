@@ -10,6 +10,7 @@
 #define DEBUG
 
 
+
 wifiConnect 			* myWifi;	// PTR pour unr instance statique "wifiConnect"
 wifi_credential_ap		* myWifiAp;	// PTR pour unr instance statique "wifi_credential_ap"
 
@@ -42,23 +43,21 @@ adriTools_serialRead    * _serial;
 		ALS_espwebserver	* _webserver;
 
 
-
 void setup()
-{
+{	
 	Serial.begin(115200);
 	delay(1000);
 	fsprintf("\n");
 
-	SPIFFS.begin();
+	LittleFS.begin();
 
 	String  path = "/devcices_save.txt";
-	SPIFFS.remove(path);
+	LittleFS.remove(path);
     path = "/devcices_output.txt";
-    SPIFFS.remove(path);
+    LittleFS.remove(path);
     
 
 	new devicesManage();
-
 
     _serial = new adriTools_serialRead();
     _serial->cmd_array(1, 5);
@@ -82,8 +81,8 @@ void setup()
 	wifi_credential_sta_fromSPIFF();
 	wifi_credential_set(
 		0, 						
-		"ssid", 		
-		"pswd", 			
+		"freebox_123_EXT", 		
+		"phcaadax", 			
 		"",						
 		"",						
 		""						
@@ -133,7 +132,6 @@ void setup()
 
 }
 
-
 void loop()
 {
 	myWifi->MDSN_loop();
@@ -157,7 +155,7 @@ String _serial_ESPreset(String cmd, String value){
 
 String _serial_freeHeap(String cmd, String value){
 	int freeHeap = ESP.getFreeHeap();
-	fsprintf("\n[freeHeap] %d", freeHeap);
+	fsprintf("\n[freeHeap] %d\n", freeHeap);
 	return "";
 }		
 

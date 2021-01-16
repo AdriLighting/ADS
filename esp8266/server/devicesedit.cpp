@@ -4,13 +4,13 @@
 #include "devices_mod.h"
 
 devices_edit::devices_edit(){
-    // SPIFFS.remove("/devcices_edit.txt");
+    // LittleFS.remove("/devcices_edit.txt");
     parametres_spiffToArray();
     
     // parametres_add("plafond",           "grp");
-    // parametres_add("salle a manger",    "grp");
+    parametres_remove("salle a manger",    "grp");
 
-    // parametres_add("salle a manger",    "room");
+    parametres_remove("salle a manger",    "room");
 
     parametres_display();
     group_setup();
@@ -25,7 +25,8 @@ void devices_edit::group_setup(){
 
     for (int i = DG_BUREAU; i < DG_UNKNOW; ++i) {
         String name = devices_grp_to_string(mod_devices_grp_array[i]); 
-        if (name=="")continue;
+        if (name=="")       continue;
+        if (name=="unknow") continue;
         groupes[count] = devices_grp_to_string(mod_devices_grp_array[i]); 
         count++;       
     }   
@@ -58,7 +59,8 @@ void devices_edit::room_setup(){
 
     for (int i = DR_CH; i < DR_UK; ++i) {
         String name = devices_room_to_string(mod_device_room_array[i]); 
-        if (name=="")continue;
+        if (name=="")       continue;
+        if (name=="unknow") continue;
         rooms[count] = devices_room_to_string(mod_device_room_array[i]); 
         count++;       
     }   
@@ -95,7 +97,7 @@ void devices_edit::parametres_display() {
 
 int devices_edit::parametres_spiffToArray() {
     String path = "/devcices_edit.txt";
-    File    file        = SPIFFS.open(path, "r");
+    File    file        = LittleFS.open(path, "r");
     String  line        = "";
     int     countParam  = 0;
 
@@ -128,7 +130,7 @@ void devices_edit::parametres_add(String s_value, String s_op) {
 
     String path = "/devcices_edit.txt";
 
-        File file = SPIFFS.open(path, "r");
+        File file = LittleFS.open(path, "r");
 
         String line = "";
 
@@ -139,7 +141,7 @@ void devices_edit::parametres_add(String s_value, String s_op) {
             line += literal_item("value",  s_value + ";");
 
             
-            file = SPIFFS.open(path, "w");
+            file = LittleFS.open(path, "w");
             file.println(line);
             file.close();
 
@@ -149,7 +151,7 @@ void devices_edit::parametres_add(String s_value, String s_op) {
 
             file.close();
                  
-            int countParam = parametres_spiffToArray();
+            // int countParam = parametres_spiffToArray();
 
             // Serial.printf("\ns_value %s - s_op %s\n", s_value.c_str(), s_op.c_str());
             // Serial.printf("countParam %d\n", countParam);
@@ -211,7 +213,7 @@ void devices_edit::parametres_add(String s_value, String s_op) {
                 if (parametres[i] != "") line += parametres[i]+"\n";
             }  
             
-            file = SPIFFS.open(path, "w");
+            file = LittleFS.open(path, "w");
             file.println(line);                    
             file.close();
 
@@ -225,7 +227,7 @@ void devices_edit::parametres_remove(String s_value, String s_op) {
 
     String path = "/devcices_edit.txt";
 
-        File file = SPIFFS.open(path, "r");
+        File file = LittleFS.open(path, "r");
 
         String line = "";
 
@@ -269,7 +271,7 @@ void devices_edit::parametres_remove(String s_value, String s_op) {
                 line += parametres[i]+"\n";
             }  
             
-            file = SPIFFS.open(path, "w");
+            file = LittleFS.open(path, "w");
             file.println(line);                    
             file.close();
 

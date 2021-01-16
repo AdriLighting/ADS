@@ -46,7 +46,10 @@ String output_type_to_string(mod_outputs_type name) {
         case OT_RGBSTRIP:       ret = "strip_rgb";      break;
         case OT_RGBWSTRIP:      ret = "strip_rgbw";     break;         
         case OT_RELAY_LP:       ret = "relay_lampe";    break;
-        case OT_RELAY_AC:       ret = "relay_ac";       break;         
+        case OT_RELAY_AC:       ret = "relay_ac";       break;  
+        default:
+            ret = "strip_rgb"; 
+            break;               
     }
     return ret;
 }
@@ -69,7 +72,10 @@ String devices_grp_to_string(mod_devices_grp name) {
         // case DG_CENTRE_RELAY:   ret = "centre_relay";   break;
         case DG_LIT:            ret = "lit";            break;
         case DG_UNKNOW:         ret = "unknow";         break; 
-        // case DG_FREE:           ret = "libre";          break;                              
+        // case DG_FREE:           ret = "libre";          break;      
+        default:
+            ret = "unknow"; 
+            break;                                
     }
     return ret;
 }

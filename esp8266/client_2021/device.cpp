@@ -12,8 +12,6 @@ String device_mod::lib_str(mod_devices_lib name) {
     }
     return ret;
 }
-
-
 String device_mod::oRoom_str(mod_devices_room name) {
     String ret = ""; 
     switch (name) {

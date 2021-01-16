@@ -2,7 +2,7 @@
 #define DEVICESSPIFF_H 
 
     #include <arduino.h>
-    #include <FS.h>   
+    #include <LittleFS.h>  
 
 
     class deviceSpiff_item {
